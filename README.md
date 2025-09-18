@@ -27,24 +27,26 @@ mamba create -n pegasusflow python=3.8
 mamba activate pegasusflow
 ```
 
-2.Install python dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-3.Install [IsaacGym](https://developer.nvidia.com/isaac-gym/download)
+2.Install [IsaacGym](https://developer.nvidia.com/isaac-gym/download)
 
 ```bash
 cd isaacgym/python
 pip install -e .
 ```
 
-4.Install the package
+3.Clone and install this repo
 
 ```bash
+git clone https://github.com/MasterYip/PegasusFlow --recursive
+cd PegasusFlow
 bash ./install.sh
 ```
+
+<!-- 4.Install python dependencies
+
+```bash
+pip install -r requirements.txt
+``` -->
 
 ## Getting Started
 
