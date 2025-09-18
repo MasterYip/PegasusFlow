@@ -173,6 +173,24 @@ class LeggedGymEnvRunner2(BatchEnvRunnerBase):
             custom_parameters=[
                 {"name": "--seed", "type": int, "default": seed, "help": "Random seed"},
                 {"name": "--task", "type": str, "default": task_name, "help": "Task name"},
+                # Demo script arguments as placeholders to prevent unrecognized argument errors
+                {"name": "--robot", "type": str, "default": "anymal_c", "help": "Robot type"},
+                {"name": "--num_envs", "type": int, "default": num_main_envs, "help": "Number of main environments"},
+                {"name": "--rollout_envs", "type": int, "default": num_rollout_per_main, "help": "Number of rollout environments"},
+                {"name": "--horizon_nodes", "type": int, "default": 32, "help": "Number of horizon nodes"},
+                {"name": "--horizon_samples", "type": int, "default": 256, "help": "Number of horizon samples"},
+                {"name": "--command", "type": str, "default": "walk_forward", "help": "Robot command"},
+                {"name": "--num_steps", "type": int, "default": 300, "help": "Number of simulation steps"},
+                {"name": "--optimize_interval", "type": int, "default": 1, "help": "Optimization interval"},
+                {"name": "--policy_checkpoint", "type": str, "default": None, "help": "Policy checkpoint path"},
+                {"name": "--disable_rl_warmstart", "action": "store_true", "help": "Disable RL warmstart"},
+                {"name": "--debug_viz", "action": "store_true", "help": "Enable debug visualization"},
+                {"name": "--debug_viz_origins", "action": "store_true", "help": "Enable debug viz origins"},
+                {"name": "--run_comparison", "action": "store_true", "help": "Run comparison"},
+                {"name": "--disable_trajectory_opt", "action": "store_true", "help": "Disable trajectory optimization"},
+                {"name": "--replay", "action": "store_true", "help": "Enable replay"},
+                {"name": "--num_diffuse_steps", "type": int, "default": None, "help": "Number of diffusion steps"},
+                {"name": "--num_diffuse_steps_init", "type": int, "default": None, "help": "Number of initial diffusion steps"},
             ]
         )
         args.headless = headless

@@ -48,9 +48,77 @@ bash ./install.sh
 pip install -r requirements.txt
 ``` -->
 
-## Getting Started
+## Getting Started (WIP)
 
-Comming soon.
+> [!NOTE]
+> Still Work In Progress.
+
+### Basic Usage
+
+Run the demo with default settings:
+
+```bash
+python demos.py --robot anymal_c
+```
+
+### Available Robots
+
+The following robot tasks are available:
+- `anymal_c`: ANYmal-C quadruped robot
+- `elspider_air_barrier_nav`: ElSpider robot with air barrier navigation
+- `elspider_air_timberpile_nav`: ElSpider robot with timber pile navigation  
+- `franka`: Franka robot arm
+
+### Key Arguments
+
+- `--num_envs`: Number of main simulation environments (default: 1)
+- `--rollout_envs`: Number of rollout environments per main environment for trajectory optimization (default: 128)
+- `--horizon_nodes`: Number of control nodes in the planning horizon
+- `--horizon_samples`: Number of trajectory samples for optimization
+- `--command`: Motion command for the robot
+
+### Example Commands
+
+**ANYmal-C locomotion:**
+```bash
+python demos.py --robot anymal_c --num_envs 1 --rollout_envs 128 --command walk_forward
+```
+
+**ElSpider barrier navigation:**
+```bash
+python demos.py --robot elspider_air_barrier_nav --num_envs 2 --rollout_envs 128
+```
+
+**Franka arm manipulation:**
+```bash
+python demos.py --robot franka --num_envs 1 --rollout_envs 128 --command reach_backward
+```
+
+### Available Commands
+
+**Locomotion commands** (for anymal_c, elspider variants):
+- `walk_forward`, `walk_backward`
+- `strafe_left`, `strafe_right` 
+- `turn_left`, `turn_right`
+- `stop`
+
+**Manipulation commands** (for franka):
+- `reach_forward`, `reach_backward`
+- `reach_left`, `reach_right`
+- `reach_up`, `reach_down`
+- `home`
+
+### Additional Options
+
+Run headless (no GUI):
+```bash
+python demos.py --robot anymal_c --headless
+```
+
+Disable trajectory optimization (policy only):
+```bash
+python demos.py --robot anymal_c --disable_trajectory_opt
+```
 
 ## Acknowledgements
 
