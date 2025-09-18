@@ -1,4 +1,9 @@
-# PegasusFlow
+<div align="center">
+
+  <h1 style="margin: 0; font-size: 1.8em;">
+      <!-- <img src="./assets/logo_white.png" alt="Logo" width="60" style="vertical-align: middle; margin-right: 10px;"> -->
+      PegasusFlow: Parallel Rolling-Denoising Score Sampling for Robot Diffusion Planner Flow Matching
+  </h1>
 
 [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.08435)
 [![arXiv](https://img.shields.io/badge/arXiv-A42C25?style=for-the-badge&logo=arxiv&logoColor=white&color=blue)](https://arxiv.org/abs/2509.08435)
@@ -6,11 +11,12 @@
 
 ![Banner](doc/Banner.svg)
 
-> [!NOTE]
-> This repository contains the source code for [**PegasusFlow: Parallel Rolling-Denoising Score Sampling for Robot Diffusion Planner Flow Matching**](https://masteryip.github.io/pegasusflow.github.io/)
-> We use [extended_legged_gym](https://github.com/MasterYip/extended_legged_gym) as the major simulation environment.
+</div>
 
-Code coming soon.
+> [!NOTE]
+> Code & Documentation coming soon.
+>
+> We use [extended_legged_gym](https://github.com/MasterYip/extended_legged_gym) as the major simulation environment.
 
 ## Installation
 
